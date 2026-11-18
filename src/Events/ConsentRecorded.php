@@ -2,9 +2,9 @@
 
 namespace JeffersonGoncalves\GdprConsent\Events;
 
-use JeffersonGoncalves\GdprConsent\Models\ConsentRecord;
+use JeffersonGoncalves\Privacy\Consent\ConsentRecorded as BaseConsentRecorded;
 
-class ConsentRecorded
-{
-    public function __construct(public ConsentRecord $record) {}
-}
+/**
+ * Fired after each grant or revoke ($record is a JeffersonGoncalves\GdprConsent\Models\ConsentRecord).
+ */
+class ConsentRecorded extends BaseConsentRecorded {}
